@@ -1,4 +1,4 @@
-# winImageSorting
+# Ordinatum
 
 parse all files with format (jpeg, jpg, png) in the current script folder and create subfolders based on available date inside metadata (YYYY-MM) and copy images inside them.
 
