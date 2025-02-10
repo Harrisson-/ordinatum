@@ -10,6 +10,9 @@ Date properties used are selected in that order:
 3. metadata creation date (metadata property name: PropertyTagDateTime)
 4. last modification date (file property name: LastWriteTime)
 
+#### issues.txt
+this file is created at the end of script execution and will list all png/jpg/jpeg file in the file on which an issue occurred
+
 #### How use it ?
 - copy the script in the folder where you have all you pictures
 - right click on the script
@@ -19,5 +22,3 @@ Date properties used are selected in that order:
 
 #### why copy instead of move ?
 to keep the control of my pictures, if the folders or the sorting isn't correct with what I expected, i just need to delete all the created folder and update the script.
-
-
