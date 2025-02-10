@@ -53,10 +53,10 @@ $test = Get-ChildItem -path ./* -Include ('*.jpg', '*.png', '*.jpeg' ) | ForEach
 }
 
 foreach ($folder in $sortFiles.Keys) {
-  $Destionation = New-Item -Path . -Name ($folder) -ItemType Directory -Force
+  $Destination  = New-Item -Path . -Name ($folder) -ItemType Directory -Force
 
   foreach ($file in $sortFiles[$folder]) {
-    Copy-Item -Path ($file.FullName) -Destination $Destionation.FullName
+    Copy-Item -Path ($file.FullName) -Destination $Destination .FullName
   }
 }
 
