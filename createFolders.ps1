@@ -9,6 +9,10 @@ $metadataCodes = @(36867, 36868, 306, 800);
 # hastable where key = folderName; value = fileName
 $sortFiles = [ordered]@{};
 
+# file with issues
+$issues = @();
+
+
 function parseDate {
   param (
     $picDate
@@ -38,7 +42,7 @@ $test = Get-ChildItem -path ./* -Include ('*.jpg', '*.png', '*.jpeg' ) | ForEach
     $date = $_.LastWriteTime | Get-Date -Format "yyyy-MM-dd"
     $folderName = parseDate($date);
   } else {
-    Write-Host "no date found for file: " + $_.Name;
+    $issues += "$($_.Name)";
   }
 
   if ([bool]$sortFiles.Contains($folderName)) {
@@ -55,3 +59,5 @@ foreach ($folder in $sortFiles.Keys) {
     Copy-Item -Path ($file.FullName) -Destination $Destionation.FullName
   }
 }
+
+$issues | Out-File -Append .\issues.txt
