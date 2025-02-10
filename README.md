@@ -22,3 +22,8 @@ this file is created at the end of script execution and will list all png/jpg/jp
 
 #### why copy instead of move ?
 to keep the control of my pictures, if the folders or the sorting isn't correct with what I expected, i just need to delete all the created folder and update the script.
+
+#### What next?
+- handling .HEIC file extension
+- add a progress bar during script execution
+- any idea is welcome
